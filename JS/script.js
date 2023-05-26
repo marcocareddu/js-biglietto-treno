@@ -1,7 +1,7 @@
 console.log('JS OK')
 
-// FASE PRELIMINARE
 
+// FASE PRELIMINARE
 // Punto all'elemento della pagina
 const paragraph = document.getElementById('display-result');
 
@@ -18,3 +18,12 @@ console.log(over65);
 console.log(discount40);
 console.log(discount20);
 console.log(costo_km);
+
+
+// SVOLGIMENTO
+// Chiedo i dati all'utente con parsInt e li salvo in variabile
+const km_amount = parseInt(prompt('Ciao! Quanti km intendi fare?'));
+console.log(km_amount);
+
+const age = parseInt(prompt('Qual è la tua età?'));
+console.log(age);
