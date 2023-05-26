@@ -13,7 +13,7 @@ const ticket_display = document.getElementById('ticket-display');
 const ticket_gross = document.getElementById('ticket-gross');
 
 // Creo le Variabili che serviranno per il calcolo successivo
-const under18 = 18;
+const under18 = 19;
 const over65 = 64;
 let discount;
 const cost_km = 0.21;
