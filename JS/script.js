@@ -34,7 +34,7 @@ const age = parseInt(prompt('Qual è la tua età?'));
 console.log(age);
 
 
-// VALIDAZIONE
+// ! VALIDAZIONE
 // Dichiaro una variabile che cambierà a seconda dell'input dell'utente
 let isCorrect = true;
 
