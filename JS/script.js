@@ -47,3 +47,16 @@ console.log(discount);
 // Calcolo il costo del biglietto e lo stampo con 2 numeri dopo la virgola
 let ticket = (km_amount * cost_km);
 console.log(ticket.toFixed(2));
+
+// Calcolo il costo del biglietto scorporando lo sconto
+if (discount === 0) {
+    console.log("Il prezzo del biglietto è di €" + ticket.toFixed(2));
+} else if (discount === 20){
+    console.log(ticket);
+    ticket -= ((ticket * discount)/100);
+    console.log("Il prezzo del biglietto è di €" + ticket.toFixed(2));
+} else {
+    console.log(ticket);
+    ticket -= ((ticket * discount)/100);
+    console.log("Il prezzo del biglietto è di €" + ticket.toFixed(2));
+}
