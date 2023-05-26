@@ -95,9 +95,7 @@ if (isCorrect) {
     km_display.innerText = km_amount;
     age_display.innerText = age;
     discount_perc.innerText = discount;
-    ticket_gross.innerText = ticket;
+    ticket_gross.innerText = ticket.toFixed(2);
     discount_display.innerText = (ticket - ticket_net).toFixed(2);
     ticket_display.innerText = ticket_net.toFixed(2);
 }
-
-
