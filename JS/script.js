@@ -61,5 +61,5 @@ if (discount === 0) {
     console.log("Il prezzo del biglietto è di €" + ticket.toFixed(2));
 }
 
-// Stampa in pagina il risultato
-paragraph.innerText = "Il prezzo del biglietto è: €" + ticket;
+// Stampa in pagina il risultato con 2 numeri dopo la virgola
+paragraph.innerText = "Il prezzo del biglietto è: €" + ticket.toFixed(2);
