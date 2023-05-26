@@ -10,8 +10,10 @@ const age_display = document.getElementById('age-display');
 const discount_perc = document.getElementById('discount-perc');
 const discount_display = document.getElementById('discount-display');
 const ticket_display = document.getElementById('ticket-display');
+const ticket_gross = document.getElementById('ticket-gross');
 
-// Creo le Variabili costanti che serviranno per il calcolo successivo
+
+// Creo le Variabili che serviranno per il calcolo successivo
 const under18 = 18;
 const over65 = 64;
 let discount;
@@ -60,7 +62,7 @@ let ticket_net;
 if (discount === 0) {
     console.log("Il prezzo del biglietto è di €" + ticket.toFixed(2));
     ticket_net = ticket;
-    
+
 } else if (discount === 20){
     console.log(ticket);
     ticket_net = ticket - ((ticket * discount)/100);
@@ -76,5 +78,6 @@ if (discount === 0) {
 km_display.innerText = km_amount;
 age_display.innerText = age;
 discount_perc.innerText = discount;
+ticket_gross.innerText = ticket;
 discount_display.innerText = (ticket - ticket_net).toFixed(2);
 ticket_display.innerText = ticket_net.toFixed(2);
