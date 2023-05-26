@@ -60,3 +60,6 @@ if (discount === 0) {
     ticket -= ((ticket * discount)/100);
     console.log("Il prezzo del biglietto è di €" + ticket.toFixed(2));
 }
+
+// Stampa in pagina il risultato
+paragraph.innerText = "Il prezzo del biglietto è: €" + ticket;
