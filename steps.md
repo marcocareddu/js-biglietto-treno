@@ -20,8 +20,7 @@ Abbellimenti vari con CSS -->
 - Creo una variabile che punta ad un elemento della pagina
 - Creo una variabile per minorenne
 - Creo una variabile per over 65
-- Creo una variabile con lo sconto anziani
-- Creo una variabile con lo sconto giovani
+- Creo una variabile con lo sconto
 - Creo una variabile con il costo/km
 
 ## Svolgimento
