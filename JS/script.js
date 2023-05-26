@@ -9,13 +9,13 @@ const paragraph = document.getElementById('display-result');
 const under18 = 18;
 const over65 = 65;
 let discount;
-const costo_km = 0.21;
+const cost_km = 0.21;
 
 // Verifico le variabili in console
 console.log(under18);
 console.log(over65);
 console.log(discount);
-console.log(costo_km);
+console.log(cost_km);
 
 
 // SVOLGIMENTO
@@ -30,14 +30,20 @@ console.log(age);
 if ((age >= under18) && (age <= over65)) {
     discount = 0;
     console.log("Non hai diritto allo sconto");
+    console.log(discount);
 
 } else if (age <= under18) {
     discount = 20;
     console.log("Sei ggggiovane, hai uno sconto del " + discount + "%!");
 
-}     else {
+} else {
     discount = 40;
     console.log("Sei vecio!, hai uno sconto del " + discount + "%!");
 }
 
+// Verifico che valora ha assunto la variabile discount
 console.log(discount);
+
+// Calcolo il costo del biglietto e lo stampo con 2 numeri dopo la virgola
+let ticket = (km_amount * cost_km);
+console.log(ticket.toFixed(2));
