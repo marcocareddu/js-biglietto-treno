@@ -1,13 +1,19 @@
 console.log('JS OK')
 
-
 // FASE PRELIMINARE
 // Punto all'elemento della pagina
 const paragraph = document.getElementById('display-result');
 
+// VARIABILI BONUS
+const km_display = document.getElementById('km-display');
+const age_display = document.getElementById('age-display');
+const discount_perc = document.getElementById('discount-perc');
+const discount_display = document.getElementById('discount-display');
+const ticket_display = document.getElementById('ticket-display');
+
 // Creo le Variabili costanti che serviranno per il calcolo successivo
 const under18 = 18;
-const over65 = 65;
+const over65 = 64;
 let discount;
 const cost_km = 0.21;
 
@@ -41,25 +47,34 @@ if ((age >= under18) && (age <= over65)) {
     console.log("Sei vecio!, hai uno sconto del " + discount + "%!");
 }
 
-// Verifico che valora ha assunto la variabile discount
+// Verifico che valore ha assunto la variabile discount
 console.log(discount);
 
 // Calcolo il costo del biglietto e lo stampo con 2 numeri dopo la virgola
 let ticket = (km_amount * cost_km);
 console.log(ticket.toFixed(2));
 
+let ticket_net;
+
 // Calcolo il costo del biglietto scorporando lo sconto
 if (discount === 0) {
     console.log("Il prezzo del biglietto è di €" + ticket.toFixed(2));
+    ticket_net = ticket;
+    
 } else if (discount === 20){
     console.log(ticket);
-    ticket -= ((ticket * discount)/100);
-    console.log("Il prezzo del biglietto è di €" + ticket.toFixed(2));
+    ticket_net = ticket - ((ticket * discount)/100);
+    console.log("Il prezzo del biglietto è di €" + ticket_net.toFixed(2));
+
 } else {
     console.log(ticket);
-    ticket -= ((ticket * discount)/100);
-    console.log("Il prezzo del biglietto è di €" + ticket.toFixed(2));
+    ticket_net = ticket - ((ticket * discount)/100);
+    console.log("Il prezzo del biglietto è di €" + ticket_net.toFixed(2));
 }
 
 // Stampa in pagina il risultato con 2 numeri dopo la virgola
-paragraph.innerText = "Il prezzo del biglietto è: €" + ticket.toFixed(2);
+km_display.innerText = km_amount;
+age_display.innerText = age;
+discount_perc.innerText = discount;
+discount_display.innerText = (ticket - ticket_net).toFixed(2);
+ticket_display.innerText = ticket_net.toFixed(2);
